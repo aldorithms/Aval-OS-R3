@@ -1,0 +1,17 @@
+[package]
+name = "Aval-OS-R3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloc = "0.0.0"
+
+[dependencies.x86_64]
+version = "0.14.4"
+features = ["default", "const_fn", "early-exit", "mmu", "page-tables", "paging", "rdtsc", "smp"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
