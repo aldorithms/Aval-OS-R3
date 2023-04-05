@@ -1,11 +1,7 @@
 use crate::process::{ProcessState, PROCESSOR};
 
-pub fn round_robin_scheduler() 
-{
-    let mut current_process = PROCESSOR
-        .lock()
-        .current_process()
-        .unwrap();
+pub fn round_robin_scheduler() {
+    let mut current_process = PROCESSOR.lock().current_process().unwrap();
 
     // Find the next process to run
     let mut next_process = None;
@@ -30,7 +26,8 @@ pub fn round_robin_scheduler()
     {
         for process in PROCESSOR
             .lock()
-            .processes.iter_mut() 
+            .processes
+            .iter_mut() 
             {
                 if process.state == ProcessState::Ready 
                 {
