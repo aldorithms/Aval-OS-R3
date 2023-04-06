@@ -6,8 +6,10 @@ edition = "2021"
 [dependencies]
 alloc = "0.0.0"
 
+
 [dependencies.x86_64]
 version = "0.14.4"
+x86_64 = "0.13.2"
 features = ["default", "const_fn", "early-exit", "mmu", "page-tables", "paging", "rdtsc", "smp"]
 
 [profile.dev]

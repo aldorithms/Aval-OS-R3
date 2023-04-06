@@ -2,7 +2,12 @@ use x86_64::structures::idt::InterruptStackFrame;
 
 #[derive(Debug, Clone, Copy)]
 #[repr(u8)]
-pub enum InterruptIndex { Breakpoint = 3, PageFault = 14, DoubleFault = 8, }
+pub enum InterruptIndex 
+{ 
+    Breakpoint = 3, 
+    PageFault = 14, 
+    DoubleFault = 8, 
+}
 
 pub fn handle_interrupt(interrupt_index: InterruptIndex, _stack_frame: &mut InterruptStackFrame) 
 {
@@ -10,7 +15,7 @@ pub fn handle_interrupt(interrupt_index: InterruptIndex, _stack_frame: &mut Inte
     {
         InterruptIndex::Breakpoint 
         => 
-            handle_breakpoint(), 
+            handle_breakpoint(),
             _ => 
                 panic!("Unhandled interrupt: {:?}", interrupt_index),
     }

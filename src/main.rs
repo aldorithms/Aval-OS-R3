@@ -18,11 +18,13 @@ use alloc::boxed::Box;
 use core::panic::PanicInfo;
 
 #[global_allocator]
-static ALLOCATOR: linked_list_allocator::LockedHeap = linked_list_allocator::LockedHeap::empty();
+static ALLOCATOR:
+     linked_list_allocator::LockedHeap 
+        = linked_list_allocator::LockedHeap::empty();
 
 #[no_mangle]
 pub extern "C" fn _start()
--> ! 
+    -> ! 
     {
         serial_println!("Kernel initialized");
         gdt::init();
@@ -34,8 +36,26 @@ pub extern "C" fn _start()
                 .initialize() 
         };
         x86_64::instructions::interrupts::enable();
+
         memory::init_heap();
-        let _allocated_box = Box::new(42);
+
+        // Initialize the timer
+        init_timer(TIMER_INTERVAL_US);
+    
+        // Create some sample processes
+        let mut process1 
+            = create_process()
+                .unwrap();
+        let mut process2 
+            = create_process()
+                .unwrap();
+    
+        // Set the starting state of the processes
+        process
+
+        let _allocated_box 
+            = Box::new(42);
+
         serial_println!("Box allocated at {:p}", _allocated_box);
         loop 
         {
@@ -45,7 +65,7 @@ pub extern "C" fn _start()
 
 #[alloc_error_handler]
 fn alloc_error_handler(layout: alloc::alloc::Layout) 
--> ! 
+    -> ! 
     {
         panic!("allocation error: {:?}", layout)
     }

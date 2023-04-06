@@ -1,0 +1,41 @@
+Date : 2023-04-05 16:58:43
+Directory : c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3
+Total : 12 files,  327 codes, 14 comments, 52 blanks, all 393 lines
+
+Languages
++-------------------------+------------+------------+------------+------------+------------+
+| language                | files      | code       | comment    | blank      | total      |
++-------------------------+------------+------------+------------+------------+------------+
+| Rust                    |         10 |        301 |         11 |         44 |        356 |
+| TOML                    |          1 |         14 |          0 |          5 |         19 |
+| x86 and x86_64 Assembly |          1 |         12 |          3 |          3 |         18 |
++-------------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                              |         12 |        327 |         14 |         52 |        393 |
+| . (Files)                                                                      |          1 |         14 |          0 |          5 |         19 |
+| bootloader                                                                     |          1 |         12 |          3 |          3 |         18 |
+| src                                                                            |         10 |        301 |         11 |         44 |        356 |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------+-------------------------+------------+------------+------------+------------+
+| filename                                                                       | language                | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+-------------------------+------------+------------+------------+------------+
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\Cargo.toml          | TOML                    |         14 |          0 |          5 |         19 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\bootloader\boot.asm | x86 and x86_64 Assembly |         12 |          3 |          3 |         18 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\GDT.rs          | Rust                    |         15 |          0 |          2 |         17 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\IDT.rs          | Rust                    |         29 |          0 |          4 |         33 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\Message.rs      | Rust                    |         30 |          0 |          5 |         35 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\Process.rs      | Rust                    |         73 |          4 |          9 |         86 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\Scheduler.rs    | Rust                    |         38 |          3 |          5 |         46 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\interrupts.rs   | Rust                    |         18 |          1 |          3 |         22 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\main.rs         | Rust                    |         54 |          3 |          9 |         66 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\memory.rs       | Rust                    |         22 |          0 |          3 |         25 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\panic.rs        | Rust                    |          9 |          0 |          1 |         10 |
+| c:\Users\aldor\Source\repos\Aval-OS\research-os\Aval-OS-R3\src\serial.rs       | Rust                    |         13 |          0 |          3 |         16 |
+| Total                                                                          |                         |        327 |         14 |         52 |        393 |
++--------------------------------------------------------------------------------+-------------------------+------------+------------+------------+------------+
